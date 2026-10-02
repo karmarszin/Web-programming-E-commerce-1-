@@ -4,12 +4,107 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="./images/favicon.png" />
+  <link rel="stylesheet" href="./css/style.css">
   <title>Art Catalogue</title>
 </head>
 <body>
 
-  <h1>Заголовок</h1>
-  <p>Это моя первая веб-страница.</p>
+    <header class="main-header">
+      <h1>ArtGallery</h1>
+      <button id="cart-toggle-btn">Корзина (<span id="cart-count">0</span>)</button>
+    </header>
 
+
+    <main>
+      <section class="catalog">
+        <h2>Catalogue</h2>
+
+        <!-- Сетка с карточками товаров -->
+         <div class="artworks-grid">
+            <article class="card">
+              <img src="./images/artworks/roz_veter.jpg" alt="Розовый ветер" height="200" width="300">
+              
+              <h3>Розовый ветер</h3>
+              <span class="year">2007</span>
+              <p class="artist">Сергей Евсин</p>
+              
+              <div class="card-footer">
+                <span class="price">237 000 ₽</span>
+                <button class="btn-add" data-id="1">Добавить в корзину</button>
+              </div>
+            </article>
+         
+
+
+            
+            <article class="card">
+              <img src="./images/artworks/progulka.jpg" alt="Розовый ветер" height="200" width="300">
+              
+              <h3>Прогулка в белую ночь</h3>
+              <span class="year">2012</span>
+              <p class="artist">Арон Зинштейн</p>
+              
+              <div class="card-footer">
+                <span class="price">700 000 ₽</span>
+                <button class="btn-add" data-id="2">Добавить в корзину</button>
+              </div>
+            </article>
+
+
+            <article class="card">
+              <img src="./images/artworks/most.jpg" alt="Фонарный мост" height="200" width="300">
+              
+              <h3>Фонарный мост</h3>
+              <span class="year">2004</span>
+              <p class="artist">Олег Чернов</p>
+              
+              <div class="card-footer">
+                <span class="price">237 000 ₽</span>
+                <button class="btn-add" data-id="3">Добавить в корзину</button>
+              </div>
+            </article>
+
+
+
+
+            <article class="card">
+              <img src="./images/artworks/istanbul.jpg" alt="Стамбул. Долма-бахче" height="200" width="300">
+              
+              <h3>Стамбул. Долма-бахче</h3>
+              <span class="year">2004</span>
+              <p class="artist">Рубен Монахов</p>
+              
+              <div class="card-footer">
+                <span class="price">386 000 ₽</span>
+                <button class="btn-add" data-id="4">Добавить в корзину</button>
+              </div>
+            </article>
+
+
+
+            <article class="card">
+              <img src="./images/artworks/atlantica.jpg" alt="Атлантика. Атлантический океан" height="200" width="300">
+              
+              <h3>Атлантика. Атлантический океан</h3>
+              <span class="year">2016</span>
+              <p class="artist">Юлия Машкова</p>
+              
+              <div class="card-footer">
+                <span class="price">232 000 ₽</span>
+                <button class="btn-add" data-id="5">Добавить в корзину</button>
+              </div>
+            </article>
+
+          </div>
+
+      </section>
+    </main>
+    <footer class="main-footer">
+      <p>© 2026 ArtGallery. All rights reserved</p>
+    </footer>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
