@@ -17,7 +17,9 @@ function renderCart() {
 document.querySelectorAll(".btn-add").forEach((btn) => {
   btn.onclick = () => { addItem(+btn.dataset.id); renderCart(); };
 });
+function closeCart() { el("cart-panel").hidden = true; }
 el("cart-toggle-btn").onclick = () => { el("cart-panel").hidden = !el("cart-panel").hidden; };
+el("cart-close-btn").onclick = closeCart;
 el("checkout-btn").onclick = () => { el("order-modal").hidden = false; };
 el("order-cancel").onclick = () => { el("order-modal").hidden = true; };
 el("cart-items").onclick = (e) => {

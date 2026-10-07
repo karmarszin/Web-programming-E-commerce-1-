@@ -176,6 +176,7 @@ main {
 }
 
 #cart-panel { position: fixed; top: 0; right: 0; bottom: 0; width: min(100%, 380px); z-index: 20; background: #fff; padding: 1.25rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: .75rem; overflow: auto; }
+.cart-head { display: flex; justify-content: space-between; align-items: center; }
 #cart-panel[hidden], #order-modal[hidden] { display: none !important; }
 .cart-row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding: .5rem 0; }
 .qty { width: 4rem; padding: .35rem; }
