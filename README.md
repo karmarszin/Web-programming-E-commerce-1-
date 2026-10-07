@@ -7,3 +7,5 @@
 Корзину можно открывать и закрывать
 
 Нельзя оформить заказ из 0 картин
+
+Деплой: https://karmarszin.github.io/Web-programming-E-commerce-1-/
