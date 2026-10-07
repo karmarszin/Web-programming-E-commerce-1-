@@ -17,6 +17,7 @@ function renderCart() {
     btn.disabled = inCart;
     btn.textContent = inCart ? "В корзине" : "Добавить в корзину";
   });
+  el("checkout-btn").disabled = !cart.length;
 }
 
 document.querySelectorAll(".btn-add").forEach((btn) => {
@@ -25,7 +26,7 @@ document.querySelectorAll(".btn-add").forEach((btn) => {
 function closeCart() { el("cart-panel").hidden = true; }
 el("cart-toggle-btn").onclick = () => { el("cart-panel").hidden = !el("cart-panel").hidden; };
 el("cart-close-btn").onclick = closeCart;
-el("checkout-btn").onclick = () => { el("order-modal").hidden = false; };
+el("checkout-btn").onclick = () => { if (cart.length) el("order-modal").hidden = false; };
 el("order-cancel").onclick = () => { el("order-modal").hidden = true; };
 el("cart-items").onclick = (e) => {
   const row = e.target.closest(".cart-row");
@@ -37,6 +38,7 @@ el("cart-items").onchange = (e) => {
 };
 el("order-form").onsubmit = (e) => {
   e.preventDefault();
+  if (!cart.length) return;
   alert("Заказ создан!");
   el("order-modal").hidden = true;
   cart = [];
