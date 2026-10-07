@@ -175,6 +175,17 @@ main {
   color: var(--text-muted);
 }
 
+#cart-panel { position: fixed; top: 0; right: 0; bottom: 0; width: min(100%, 380px); z-index: 20; background: #fff; padding: 1.25rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: .75rem; overflow: auto; }
+#cart-panel[hidden], #order-modal[hidden] { display: none !important; }
+.cart-row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding: .5rem 0; }
+.qty { width: 4rem; padding: .35rem; }
+#order-modal { position: fixed; inset: 0; z-index: 30; background: rgba(0,0,0,.4); display: flex; align-items: center; justify-content: center; padding: 1rem; }
+#order-form { background: #fff; display: flex; flex-direction: column; gap: .6rem; padding: 1.5rem; border-radius: var(--radius); width: min(100%, 400px); }
+#order-form input { width: 100%; padding: .5rem; }
+@media (max-width: 900px) {
+  .artworks-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* =========================================
    Мобильная адаптивность
    ========================================= */

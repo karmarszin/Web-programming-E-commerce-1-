@@ -99,6 +99,24 @@
 
       </section>
     </main>
+    <aside id="cart-panel" hidden>
+      <h2>Корзина</h2>
+      <div id="cart-items"></div>
+      <p>Итого: <span id="cart-total">0 ₽</span></p>
+      <button type="button" id="checkout-btn">Оформить заказ</button>
+    </aside>
+    <div id="order-modal" hidden>
+      <form id="order-form">
+        <h2>Оформление заказа</h2>
+        <label>Имя <input name="firstName" required></label>
+        <label>Фамилия <input name="lastName" required></label>
+        <label>Адрес доставки <input name="address" required></label>
+        <label>Контактный номер телефона <input name="phone" type="tel" required></label>
+        <button type="submit">Создать заказ</button>
+        <button type="button" id="order-cancel">Закрыть</button>
+      </form>
+    </div>
+
     <footer class="main-footer">
       <p>© 2026 ArtGallery. All rights reserved</p>
     </footer>
