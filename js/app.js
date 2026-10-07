@@ -7,11 +7,16 @@ function renderCart() {
   el("cart-items").innerHTML = cart.length
     ? cart.map((i) => `<div class="cart-row" data-id="${i.id}">
         <span>${i.title}</span>
-        <input class="qty" type="number" min="1" value="${i.qty}">
+        <input class="qty" type="number" min="1" max="1" value="${i.qty}">
         <span>${money(i.price * i.qty)}</span>
         <button type="button" class="btn-remove">Удалить</button>
       </div>`).join("")
     : "<p>Корзина пуста</p>";
+  document.querySelectorAll(".btn-add").forEach((btn) => {
+    const inCart = cart.some((i) => i.id === +btn.dataset.id);
+    btn.disabled = inCart;
+    btn.textContent = inCart ? "В корзине" : "Добавить в корзину";
+  });
 }
 
 document.querySelectorAll(".btn-add").forEach((btn) => {
